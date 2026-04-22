@@ -1,0 +1,10 @@
+services:
+  my-node-app:
+    # This tells Docker to build from the files in the repository
+    build: .
+    container_name: node-server
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
